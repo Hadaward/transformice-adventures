@@ -13,8 +13,6 @@
             const proto801 = defargs[params.indexOf("./reseau/ProtoM801")];
             const interfaceTalents = defargs[params.indexOf("../interfaces/InterfaceTalents")];
             const boutonEtat = defargs[params.indexOf(params.find(p => p.endsWith("I_BoutonEtat")))];
-          
-            console.log(params);
 
             if (module801 && proto801)
                 this.fixChat(module801.default, proto801.default);
@@ -46,7 +44,7 @@
         },
 
         fixInterfaceTalents(interfaceTalents) {
-            interfaceTalents.conteneurListeArbres.defHauteur(320);
+            console.log(interfaceTalents);
         },
 
         fixCheckBoxes(boutonEtat) {
