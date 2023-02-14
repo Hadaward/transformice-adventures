@@ -12,17 +12,17 @@
             const boutonEtat = defargs[params.indexOf(params.find(p => p.endsWith("I_BoutonEtat")))];
 
             if (module801 && proto801)
-                this.fixChat({module801, proto801});
+                this.fixChat(module801.default, proto801.default);
 
             if (interfaceTalents)
-                this.fixInterfaceTalents({interfaceTalents});
+                this.fixInterfaceTalents(interfaceTalents.default);
 
             if (boutonEtat)
-                this.fixCheckBoxes({boutonEtat});
+                this.fixCheckBoxes(boutonEtat.I_BoutonEtat);
         },
 
-        fixChat(classes) {
-            classes.proto801.ajouterPaquet = function (IDENTIFIANT, FONCTION, ECRASER) {
+        fixChat(module801, proto801) {
+            proto801.ajouterPaquet = function (IDENTIFIANT, FONCTION, ECRASER) {
                 if (IDENTIFIANT == 0x606 && this.indexPaquetLecture[IDENTIFIANT]) {
                     return;
                 }
@@ -32,15 +32,15 @@
                 }
                 this.indexPaquetLecture[IDENTIFIANT] = FONCTION;
             };
-            classes.proto801.ajouterPaquet(classes.proto801.fusionCode(6, 6), function (MSG) {
+            proto801.ajouterPaquet(proto801.fusionCode(6, 6), function (MSG) {
                 var auteur = MSG.lChaine();
                 var message = MSG.lChaine();
                 message = message.replace(/&lt;/g, "<");
-                classes.module801.instance.messageChat(message, auteur);
+                module801.instance.messageChat(message, auteur);
             });
         },
 
-        fixInterfaceTalents(classes) {
+        fixInterfaceTalents(interfaceTalents) {
             interfaceTalents.prototype.initialisation = function (MSG) {
                 var _this = this;
                 var codeTypeArbres = MSG.l8();
@@ -142,8 +142,8 @@
             };
         },
 
-        fixCheckBoxes(classes) {
-            classes.boutonEtat.prototype.cocher = function (OUI, DECLENCHER) {
+        fixCheckBoxes(boutonEtat) {
+            boutonEtat.prototype.cocher = function (OUI, DECLENCHER) {
                 if (DECLENCHER === void 0) { DECLENCHER = false; }
                 this.estCoche = OUI;
                 if (!this.croix.parentElement)
