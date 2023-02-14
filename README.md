@@ -5,3 +5,6 @@ I intend to release extensions for browsers that support Tampermonkey and Grease
 
 ## patch.js
 This file is dynamically loaded by extensions and contains code that is injected into the game to make corrections. The steam version has its standalone modified to load this file.
+
+## Browser Extensions
+Both GreaseMonkey (FireFox) and TamperMoneky (Chrome) are now supported. The script used is compatible with both extensions and is available to anyone on the [extension](/../../tree/extension) branch
