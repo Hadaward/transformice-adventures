@@ -11,13 +11,14 @@
         find(params, defargs) {
             const module801 = defargs[params.indexOf("./Module801")];
             const proto801 = defargs[params.indexOf("./reseau/ProtoM801")];
-            const interfaceTalents = defargs[params.indexOf("../interfaces/InterfaceTalents")];
+            const interfaceTalents = defargs[params.indexOf(params.find(p => p.endsWith("InterfaceTalents")))];
             const boutonEtat = defargs[params.indexOf(params.find(p => p.endsWith("I_BoutonEtat")))];
 
             if (module801 && proto801)
                 this.fixChat(module801.default, proto801.default);
 
-            console.log(defargs[params.indexOf(params.find(p => p.endsWith("InterfaceTalents")))]);
+            if (interfaceTalents)
+                this.fixInterfaceTalents(interfaceTalents.default);
 
             if (boutonEtat)
                 this.fixCheckBoxes(boutonEtat.I_BoutonEtat);
@@ -43,7 +44,11 @@
         },
 
         fixInterfaceTalents(interfaceTalents) {
-            console.log(interfaceTalents);
+            const afficher = interfaceTalents.afficher.bind(interfaceTalents);
+            interfaceTalents.afficher = function (MSG) {
+                afficher(MSG);
+                console.log(interfaceTalents.instance);
+            }
         },
 
         fixCheckBoxes(boutonEtat) {
