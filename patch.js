@@ -2,10 +2,10 @@
             const __define = define;
             globalThis.define = function(params, callback) {
                 return __define(params, function(...defargs) {
-                    const proto801 = defargs[params.indexOf("./reseau/ProtoM801")]?.default;
-                    const module801 = defargs[params.indexOf("./Module801")]?.default;
-                    const interfaceTalents = defargs[params.indexOf("../interfaces/InterfaceTalents")]?.default;
-                    const boutonEtat = defargs[params.indexOf(params.find(p => p.endsWith("I_BoutonEtat")))]?.I_BoutonEtat;
+                    const proto801 = (defargs[params.indexOf("./reseau/ProtoM801")] || {}).default;
+                    const module801 = (defargs[params.indexOf("./Module801")] || {}).default;
+                    const interfaceTalents = (defargs[params.indexOf("../interfaces/InterfaceTalents")] || {}).default;
+                    const boutonEtat = (defargs[params.indexOf(params.find(p => p.endsWith("I_BoutonEtat")))] || {}).I_BoutonEtat;
                     
                     if (boutonEtat) {
                         boutonEtat.prototype.cocher = function (OUI, DECLENCHER) {
