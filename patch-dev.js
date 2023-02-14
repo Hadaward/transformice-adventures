@@ -47,7 +47,7 @@
             const afficher = interfaceTalents.afficher.bind(interfaceTalents);
             interfaceTalents.afficher = function (MSG) {
                 afficher(MSG);
-                console.log(interfaceTalents.instance);
+                interfaceTalents.instance.conteneurListeArbres.defHauteur(320);
             }
         },
 
