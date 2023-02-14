@@ -17,8 +17,7 @@
             if (module801 && proto801)
                 this.fixChat(module801.default, proto801.default);
 
-            if (interfaceTalents)
-                this.fixInterfaceTalents(interfaceTalents.default);
+            console.log(interfaceTalents);
 
             if (boutonEtat)
                 this.fixCheckBoxes(boutonEtat.I_BoutonEtat);
