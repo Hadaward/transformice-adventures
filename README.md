@@ -4,4 +4,6 @@ This is my job to help the Transformice Adventures community, a game that was de
 I intend to release extensions for browsers that support Tampermonkey and Greasemonkey, as well as fixes for the steam version and create my own standalone.
 
 ## extensions
-This branch contains the code used in the development of scripts to patch the game in the browser using the TamperMonkey and GreaseMonkey extensions. Remembering that these scripts only induce the game to load the file [patch.js](/../main/patch.js) who is responsible for applying game patches.
+This branch contains the code used in the development of the userscript to patch the game in the browser using the TamperMonkey and GreaseMonkey extensions. Remembering that these scripts only induce the game to load the file [patch.js](/../main/patch.js) who is responsible for applying game patches.
+
+PS: This script is compatible with both [TamperMonkey](https://www.tampermonkey.net) and [GreaseMonkey](https://www.greasespot.net/) extensions.
