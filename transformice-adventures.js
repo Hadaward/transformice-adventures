@@ -1,13 +1,11 @@
 // ==UserScript==
 // @name         Transformice Adventures
-// @namespace    transformice-adventures.com/
 // @run-at       document-idle
 // @version      1.0
 // @description  Fix Transformice Adventures issues
 // @author       Hadaward
-// @match        http*://transformice-adventures.com/
+// @match        *://transformice-adventures.com/
 
-// ==/UserScript==
 (async function() {
     'use strict';
     if (window.location.protocol.startsWith('https')) {
