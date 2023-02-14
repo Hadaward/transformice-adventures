@@ -5,7 +5,7 @@
 // @description  Fix Transformice Adventures issues
 // @author       Hadaward
 // @match        *://transformice-adventures.com/
-
+// ==/UserScript==
 (async function() {
     'use strict';
     if (window.location.protocol.startsWith('https')) {
