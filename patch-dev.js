@@ -15,6 +15,11 @@
             if (!response.ok) {
                 console.warn(response.error);
             }
+
+            if (localStorage.getItem("patch-load") === null) {
+                localStorage.setItem("patch-load", true);
+                window.location.reload();
+            }
         }
     });
 
