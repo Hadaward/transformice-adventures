@@ -1,6 +1,6 @@
 'use strict';
 (async () => {
-    const { TFMAPI } = await import('./api/api.js');
+    const { TFMAPI } = await import(new URL('..', document.currentScript.src).href + 'api/api.js');
 
     await TFMAPI.loadMetadata();
 
