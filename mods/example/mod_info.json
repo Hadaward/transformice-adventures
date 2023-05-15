@@ -1,0 +1,13 @@
+{
+    "name": "Example mod",
+    "version": "1.0.0",
+    "author": "???",
+
+    "description": "A example mod for Transformice Adventures Patch Loader (TAPL)",
+
+    "entry_point": "example.js",
+    
+    "loader": {
+        "min_version": "2.0.0"
+    }
+}

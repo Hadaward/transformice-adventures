@@ -1,0 +1,13 @@
+{
+    "name": "Emojis",
+    "version": "1.0.0",
+    "author": "Hadaward",
+
+    "description": "How about getting some extra emojis to share with friends? This mod allows you to use the new Transformice emojis.",
+
+    "entry_point": "index.js",
+    
+    "loader": {
+        "min_version": "2.0.0"
+    }
+}

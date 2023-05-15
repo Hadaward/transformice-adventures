@@ -1,0 +1,35 @@
+{
+    "version": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+    },
+
+    "defaultMods": [
+        "$baseURL/mods/tapl_bugfixes/mod_info.json",
+        "$baseURL/mods/emojis/mod_info.json"
+    ],
+
+    "classes": [
+        {"name": "Clavier", "path": "Clavier", "exports": "Clavier"},
+        {"name": "Trad801", "path": "Trad801", "exports": "default"},
+        {"name": "I_Texte", "path": "I_Texte", "exports": "I_Texte"},
+        {"name": "I_Image", "path": "I_Image", "exports": "I_Image"},
+        {"name": "ProtoADV", "path": "ProtoADV", "exports": "default"},
+        {"name": "I_Bouton", "path": "I_Bouton", "exports": "I_Bouton"},
+        {"name": "Module801", "path": "./Module801", "exports": "default"},
+        {"name": "Communaute", "path": "Communaute", "exports": "default"},
+        {"name": "ClavierADV", "path": "ClavierADV", "exports": "default"},
+        {"name": "I_Element", "path": "I_Element", "exports": "I_Element"},
+        {"name": "I_Conteneur", "path": "I_Conteneur", "exports": "I_Conteneur"},
+        {"name": "ProtoM801", "path": "./reseau/ProtoM801", "exports": "default"},
+        {"name": "I_BoutonEtat", "path": "I_BoutonEtat", "exports": "I_BoutonEtat"},
+        {"name": "ContexteClavier", "path": "Clavier", "exports": "ContexteClavier"},
+        {"name": "InterfaceMenuADV", "path": "InterfaceMenuADV", "exports": "default"},
+        {"name": "InterfaceTalents", "path": "InterfaceTalents", "exports": "default"},
+        {"name": "InterfaceLoginADV", "path": "InterfaceLoginADV", "exports": "default"},
+        {"name": "I_BoutonChoixMultiples", "path": "I_BoutonChoixMultiples", "exports": "default"},
+        {"name": "InfoJoueurPrincipal", "path": "InfoJoueurPrincipal", "exports": "InfoJoueurPrincipal"},
+        {"name": "TFMAdventure", "path": "dist/Transformice-adventure-client/src/_tfmAdventure/TFMAdventure", "exports": "default"}
+    ]
+}
